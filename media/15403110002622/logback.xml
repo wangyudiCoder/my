@@ -1,0 +1,11 @@
+<configuration>
+	<appender name="stash"
+		class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+		<destination>172.16.86.101:9601</destination>
+		<encoder charset="UTF-8"
+			class="net.logstash.logback.encoder.LogstashTcpEncoder" />
+	</appender>
+	<root level="INFO">
+		<appender-ref ref="stash" />
+	</root>
+</configuration>
