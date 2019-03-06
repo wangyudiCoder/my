@@ -1,5 +1,4 @@
 java 各版本的区别
-<img src="http://student.kaikeba.com//assets/blue_logo-57d711624a.png" style="float:right;width:120px;padding-top:26px;" />
 
 [TOC]
 
@@ -46,7 +45,7 @@ java语言的运行环境，包括了jvm，运行类库，应用库等必备组�
  网址
  ```url
 http://jdk.java.net/
-```
+ ```
 
 * Oracle JDK
 使用自己
@@ -56,11 +55,11 @@ Oracle JDK采用了商业实现，而OpenJDK使用的是开源的FreeType。当�
 所有的协议有五六十种
  ```url
 https://opensource.org/licenses%20/alphabetical
-```
+ ```
 常见的协议
  ```url
 http://www.open-open.com/solution/view/1319816219625
-```
+ ```
 
 #### 发展史
 
@@ -83,7 +82,7 @@ http://www.open-open.com/solution/view/1319816219625
 
  ```url
 https://www.oracle.com/technetwork/cn/java/archive-139210-zhs.html
-```
+ ```
 
 ### jvm改动
 ### forkjoin
@@ -117,7 +116,7 @@ https://www.jianshu.com/p/f76f0a0dc5c1
 ##### 启动一个线程
 
 * 老的方式
- 
+
  ```java
 Thread t = new Thread(new Runnable() {
 			@Override
@@ -126,14 +125,14 @@ Thread t = new Thread(new Runnable() {
 			}
 		});
 		t.start();
-```
+ ```
 
 * 新的方式
 
  ```java
 Thread tL = new Thread(() -> System.out.println("start...Lambda1"));
 		tL.start();
-```
+ ```
 
 ##### 一个string字母排序
 
@@ -147,7 +146,7 @@ List<String> list = Arrays.asList(new String[]{"h","e","d","n"});
 		        return b.compareTo(a);
 		    }
 		});
-```
+ ```
 * 新的方式
  ```java		
 		Collections.sort(list, (String a, String b) -> {
@@ -157,7 +156,7 @@ List<String> list = Arrays.asList(new String[]{"h","e","d","n"});
 		 * 如果只有一行代码可以省去return 大括号等
 		 */
 		Collections.sort(list, (a, b) -> b.compareTo(a));
-```
+ ```
 
 ##### 修改集合内容
 ```java
@@ -199,7 +198,7 @@ List<Integer> nums = Arrays.asList(new Integer[]{1,null,3,4,null,6,9});
 (Type1 param1, Type2 param2, ..., TypeN paramN) -> {
 //code
 }
-```
+ ```
  单参数
 ```java
 p -> {
@@ -211,26 +210,26 @@ p -> {
 由单独的表达式或者语句块组成；
  * 表达式
  如果单行代码也可以省去大括号
- 
+
  ```java
 p.getGender() == Person.Sex.MALE 
     && p.getAge() >= 18
     && p.getAge() <= 25
-```
+ ```
  * 带返回表达式
- 
+
  ```java
 p -> {
     return p.getGender() == Person.Sex.MALE
         && p.getAge() >= 18
         && p.getAge() <= 25;
 }
-```
+ ```
  * 没有类型的排序
- 
+
  ```java
 (h1, h2) -> h1.getName().compareTo(h2.getName())
-```
+ ```
 ##### 完整例子
 * 一般标准
 参数 -> 处理方法，return
@@ -242,7 +241,7 @@ p -> {
   //.............
   return statmentM;
 }
-```
+ ```
 * 单参数
 如果只有一个形参，小括号也可以省略。例如下面的lambda表达式依然是合法的
 ```java
@@ -272,7 +271,7 @@ Lambda不需要声明类或者方法，简单看来就像是一个匿名内部�
 
  ```java
 https://blog.csdn.net/valleychen1111/article/details/78038353
-```
+ ```
 
 #####编译方式
 和匿名内部不同，可以直接从编译方式上看出来。
@@ -315,7 +314,7 @@ https://blog.csdn.net/valleychen1111/article/details/78038353
  ```java
 int num = 0b1001;
 int num2 = 0B1001;
-```
+ ```
 
 ####下划线
 
@@ -325,7 +324,7 @@ int num2 = 0B1001;
 
  ```java
 int num = 1_0000_0000;
-```
+ ```
 
 ####switch 对String 的支持
 
@@ -344,7 +343,7 @@ String key = "a";
 		default:
 			break;
 		}
-```
+ ```
 
 
 ####泛型的自动识别
@@ -360,7 +359,7 @@ List<String> list2 = new ArrayList<>();
 //Map
 Map<String , Object> map = new HashMap<String , Object>();
 Map<String , Object> map2 = new HashMap<>();
-```
+ ```
 
 ####try-with-resources 
 
@@ -374,7 +373,7 @@ static String readFirstLineFromFile(String path) throws IOException {
 			return br.readLine();
 		}
 	}
-```
+ ```
 
 * finally
 之前的finally，有一些问题，JDK 9会不推荐使用（deprecated）。
@@ -392,10 +391,10 @@ try {
 		}finally {
 			//关闭连接
 		}
-```
- 
+  ```
+
 ####catch多个异常 | 分隔
- 
+
 之前我们需要些多个catch，现在一个catch可以捕获多个
 
 * 示例
@@ -414,7 +413,7 @@ try {
 		catch (IOException | SQLException | Exception ex) {
 			// 错误处理
 		}
-```
+ ```
 
 ###java8
 ####lambada表达式(Lambda Expressions)
@@ -478,7 +477,7 @@ a
 
  ```java
 a
-```
+ ```
 
 
 

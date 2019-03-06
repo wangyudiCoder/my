@@ -1,4 +1,4 @@
-# （课堂）Java Core 技术揭秘之-数据结构与算法原理
+# Java Core 技术揭秘之-数据结构与算法原理
 
 [TOC]
 
@@ -395,6 +395,7 @@ https://baike.baidu.com/item/%E5%A4%A7O%E7%AC%A6%E5%8F%B7/656100
 
 
 ```java
+
 ```
 **工程文件见 `com.kkb.`**
 
@@ -699,9 +700,9 @@ https://www.cnblogs.com/jiqing9006/p/7615467.html
 
 该数据结构是以空间换时间为概念
 例如：
-    [1,3,5,6,9,10]
+​    [1,3,5,6,9,10]
 转换后为
-    [1,0,1,0,1,1,0,0,1,1]
+​    [1,0,1,0,1,1,0,0,1,1]
 就是把存储最大数长的大数组，每个数字对应自己数字的位数，5对应第5位，10对应第10位，0或表示是否存在。
 * 优点
  省下大数字占的空间，查询快
@@ -769,13 +770,13 @@ hashMap
  ```java
 public class HashMap<K,V>extends AbstractMap<K,V>
     implements Map<K,V>, Cloneable, Serializable
-```
+ ```
 
 * 接口实现
 
  ```java
 Serializable, Cloneable, Map<K,V> 
-```
+ ```
 
 * 基本属性
 
@@ -785,7 +786,7 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;     //负载因子0.75
 static final Entry<?,?>[] EMPTY_TABLE = {};         //初始化的默认数组
 transient int size;     //HashMap中元素的数量
 int threshold;          //判断是否需要调整HashMap的容量
-```
+ ```
 
 
 
@@ -817,8 +818,8 @@ int threshold;          //判断是否需要调整HashMap的容量
         table = newTable;
         threshold = (int)Math.min(newCapacity * loadFactor, MAXIMUM_CAPACITY + 1);
     }
-```
- 
+ ```
+
  ```java
  /**
      * Transfers all entries from current table to newTable.
@@ -838,7 +839,7 @@ int threshold;          //判断是否需要调整HashMap的容量
             }
         }
     }
-```
+ ```
 
 
 * 原理
@@ -859,7 +860,7 @@ hashMap在达到扩容因子的时候会扩容（length*0.75）；
  ```java
 e.next = newTable[i];
 newTable[i] = e;
-```
+ ```
 
 
 
@@ -1070,7 +1071,7 @@ int getSumNum(int[] arr,int Sum)，   //arr为数组，Sum为和
 
  ```url
 https://www.cnblogs.com/kongk/p/8673837.html
-```
+ ```
 
 画图软件
 PPT，在线的processon，苹果下的Omnigraffle

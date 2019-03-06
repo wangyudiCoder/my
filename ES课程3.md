@@ -1,5 +1,4 @@
 ES课程3
-<img src="http://student.kaikeba.com//assets/blue_logo-57d711624a.png" style="float:right;width:120px;padding-top:42px;" />
 
 [TOC]
 ## 课堂主题
@@ -34,7 +33,7 @@ https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.4/index.html
  * 需要java 1.8
 * Java Low Level REST Client
  * 官方目前主推的API，做一些常规的操作
- 
+
 ![](media/15404317415098/15408975586482.jpg)
 
 ##### API的兼容性
@@ -897,7 +896,7 @@ GET test/type/_search
     }
   }
 }
-```
+ ```
 ##### 算法规则
 | 要素       | 描述                 |
 | ------------ | ---------------------- |
@@ -946,14 +945,14 @@ java.lang.ClassNotFoundException: org.elasticsearch.common.transport.InetSocketT
 ```
 * 解决方法
  切记版本要一致
- 
+
  ```xml
 <dependency>
 			<groupId>org.elasticsearch.plugin</groupId>
 			<artifactId>transport-netty4-client</artifactId>
 			<version>6.4.2</version>
 </dependency>
-```
+ ```
 
 
 

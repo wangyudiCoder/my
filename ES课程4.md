@@ -1,5 +1,5 @@
 ES课程4
-<img src="http://student.kaikeba.com//assets/blue_logo-57d711624a.png" style="float:right;width:120px;padding-top:42px;" />
+
 
 [TOC]
 ## 课堂主题
@@ -204,6 +204,7 @@ action => "index"
  索引不能包含大写字母。推荐使用以周为索引的ISO 8601格式，例如logstash-%{+xxxx.ww}
 * 实例
 ```shell
+
 ```
 ###### hosts
 是一个数组类型的值
@@ -293,7 +294,7 @@ output {
     }
     stdout { codec => rubydebug}
 }
-```
+ ```
 
 #### 【第三步】启动服务
 ```shell
